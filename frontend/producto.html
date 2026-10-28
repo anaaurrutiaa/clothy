@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Detalle del producto | Clothy</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>CLOTHY</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="login.html">Iniciar sesión</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="detalle-producto">
+
+            <!-- FOTOGRAFÍA -->
+            <div class="detalle-imagen">
+
+                <img id="producto-imagen"
+                     src="assets/img/camiseta.jpg"
+                     alt="Fotografía del producto">
+
+            </div>
+
+            <!-- INFORMACIÓN -->
+            <div class="detalle-informacion">
+
+                <p class="detalle-categoria"
+                   id="producto-categoria">
+                    Camisetas
+                </p>
+
+                <h2 id="producto-nombre">
+                    Camiseta básica blanca
+                </h2>
+
+                <p class="detalle-precio"
+                   id="producto-precio">
+                    $299 MXN
+                </p>
+
+                <p class="detalle-descripcion"
+                   id="producto-descripcion">
+                    Una prenda cómoda y versátil,
+                    perfecta para cualquier ocasión.
+                </p>
+
+                <!-- SELECCIÓN DE TALLA -->
+                <div class="detalle-campo">
+
+                    <label for="talla">
+                        Selecciona tu talla
+                    </label>
+
+                    <select id="talla" required>
+                        <option value="">
+                            Selecciona una talla
+                        </option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+
+                </div>
+
+                <!-- CANTIDAD -->
+                <div class="detalle-campo">
+
+                    <label for="cantidad">
+                        Cantidad
+                    </label>
+
+                    <input type="number"
+                           id="cantidad"
+                           min="1"
+                           max="10"
+                           value="1">
+
+                </div>
+
+                <!-- AÑADIR AL CARRITO -->
+                <button id="agregar-carrito"
+                        class="btn-carrito"
+                        type="button">
+
+                    Añadir al carrito
+
+                </button>
+
+                <p id="mensaje-carrito"
+                   role="status"
+                   aria-live="polite"></p>
+
+                <a href="catalogo.html"
+                   class="volver-catalogo">
+                    ← Volver al catálogo
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>
+            &copy; 2026 Clothy.
+            Todos los derechos reservados.
+        </p>
+    </footer>
+
+    <script src="assets/js/producto.js"></script>
+
+</body>
+</html>
+

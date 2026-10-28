@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Carrito de compras | Clothy</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>CLOTHY</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="login.html">Iniciar sesión</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- CABECERA -->
+        <section class="carrito-header">
+            <h2>Mi carrito</h2>
+            <p>Revisa los productos que has seleccionado.</p>
+        </section>
+
+        <!-- CONTENIDO -->
+        <section class="carrito-contenido">
+
+            <!-- MENSAJE CARRITO VACÍO -->
+            <div id="carrito-vacio" hidden>
+
+                <h3>Tu carrito está vacío</h3>
+
+                <p>
+                    Todavía no has añadido ninguna prenda.
+                </p>
+
+                <a href="catalogo.html"
+                   class="btn-comprar">
+                    Explorar colección
+                </a>
+
+            </div>
+
+            <!-- CARRITO CON PRODUCTOS -->
+            <div id="carrito-lleno" hidden>
+
+                <div class="carrito-layout">
+
+                    <!-- LISTA DE PRODUCTOS -->
+                    <div id="lista-carrito">
+                    </div>
+
+                    <!-- RESUMEN DE COMPRA -->
+                    <aside class="resumen-carrito">
+
+                        <h3>Resumen del pedido</h3>
+
+                        <div class="resumen-linea">
+                            <span>Subtotal</span>
+
+                            <strong id="subtotal">
+                                $0 MXN
+                            </strong>
+                        </div>
+
+                        <div class="resumen-linea">
+                            <span>Envío</span>
+                            <span>Por calcular</span>
+                        </div>
+
+                        <hr>
+
+                        <div class="resumen-linea resumen-total">
+                            <span>Total de productos</span>
+
+                            <strong id="total">
+                                $0 MXN
+                            </strong>
+                        </div>
+
+                        <p class="resumen-nota">
+                            El envío no está incluido.
+                            El total final se calculará
+                            al realizar el pedido.
+                        </p>
+
+                        <button id="finalizar-compra"
+                                class="btn-finalizar"
+                                type="button">
+                            Finalizar compra
+                        </button>
+
+                        <p id="mensaje-compra"
+                           role="status"
+                           aria-live="polite"></p>
+
+                        <a href="catalogo.html"
+                           class="seguir-comprando">
+                            ← Seguir comprando
+                        </a>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>
+            &copy; 2026 Clothy.
+            Todos los derechos reservados.
+        </p>
+    </footer>
+
+    <script src="assets/js/carrito.js"></script>
+
+</body>
+</html>
