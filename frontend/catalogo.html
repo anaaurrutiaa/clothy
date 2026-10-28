@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Clothy</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>CLOTHY</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="login.html">Iniciar sesión</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PRESENTACIÓN DEL CATÁLOGO -->
+        <section class="catalogo-header">
+            <h2>Nuestra colección</h2>
+            <p>Encuentra las prendas perfectas para tu estilo.</p>
+        </section>
+
+        <!-- CONTENIDO DEL CATÁLOGO -->
+        <section class="catalogo-contenido">
+
+            <!-- BUSCADOR -->
+            <div class="buscador">
+                <label for="buscar-producto">
+                    Buscar productos
+                </label>
+
+                <input
+                    type="search"
+                    id="buscar-producto"
+                    placeholder="Buscar camisetas, jeans, chaquetas..."
+                    autocomplete="off">
+            </div>
+
+            <!-- FILTROS -->
+            <div class="filtros">
+
+                <button type="button"
+                        class="filtro activo"
+                        data-categoria="todos">
+                    Todos
+                </button>
+
+                <button type="button"
+                        class="filtro"
+                        data-categoria="camisetas">
+                    Camisetas
+                </button>
+
+                <button type="button"
+                        class="filtro"
+                        data-categoria="pantalones">
+                    Pantalones
+                </button>
+
+                <button type="button"
+                        class="filtro"
+                        data-categoria="chaquetas">
+                    Chaquetas
+                </button>
+
+                <button type="button"
+                        class="filtro"
+                        data-categoria="sudaderas">
+                    Sudaderas
+                </button>
+
+            </div>
+
+            <!-- CUADRÍCULA DE PRODUCTOS -->
+            <div class="productos-grid">
+
+                <!-- CAMISETA -->
+                <article class="producto"
+                         data-categoria="camisetas">
+
+                    <img src="assets/img/camiseta.jpg"
+                         alt="Camiseta básica blanca"
+                         loading="lazy">
+
+                    <h3>Camiseta básica blanca</h3>
+                    <p class="precio">$299 MXN</p>
+
+                    <a href="producto.html?id=1">
+                        Ver producto
+                    </a>
+
+                </article>
+
+                <!-- JEANS -->
+                <article class="producto"
+                         data-categoria="pantalones">
+
+                    <img src="assets/img/jeans.jpg"
+                         alt="Jeans rectos azules"
+                         loading="lazy">
+
+                    <h3>Jeans rectos azules</h3>
+                    <p class="precio">$699 MXN</p>
+
+                    <a href="producto.html?id=2">
+                        Ver producto
+                    </a>
+
+                </article>
+
+                <!-- CHAQUETA -->
+                <article class="producto"
+                         data-categoria="chaquetas">
+
+                    <img src="assets/img/chaqueta.jpg"
+                         alt="Chaqueta oversize beige"
+                         loading="lazy">
+
+                    <h3>Chaqueta oversize beige</h3>
+                    <p class="precio">$899 MXN</p>
+
+                    <a href="producto.html?id=3">
+                        Ver producto
+                    </a>
+
+                </article>
+
+                <!-- SUDADERA -->
+                <article class="producto"
+                         data-categoria="sudaderas">
+
+                    <img src="assets/img/sudadera.jpg"
+                         alt="Sudadera gris"
+                         loading="lazy">
+
+                    <h3>Sudadera gris</h3>
+                    <p class="precio">$549 MXN</p>
+
+                    <a href="producto.html?id=4">
+                        Ver producto
+                    </a>
+
+                </article>
+
+            </div>
+
+            <!-- MENSAJE SIN RESULTADOS -->
+            <p id="sin-resultados" hidden>
+                No encontramos productos que coincidan con tu búsqueda.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Clothy. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="assets/js/catalogo.js"></script>
+
+</body>
+</html>
