@@ -1,0 +1,270 @@
+/* ===================================
+   CLOTHY - REGISTRO, LOGIN Y PERFIL
+   Complementa assets/css/style.css.
+=================================== */
+
+.cuenta-contenido {
+    padding: 55px 8% 80px;
+}
+
+.cuenta-tarjeta {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.cuenta-tarjeta h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.cuenta-intro {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* CAMPOS Y VALIDACIÓN NATIVA DE HTML */
+
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 15px 18px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #222;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.campo input:focus {
+    outline: none;
+    border-color: #a78362;
+    box-shadow: 0 0 0 2px rgba(167, 131, 98, 0.12);
+}
+
+/* Se marca el error después de la interacción, no al abrir la página.
+   El navegador muestra su mensaje al intentar enviar un campo inválido. */
+.campo input:user-invalid {
+    border-color: #a12e28;
+}
+
+.campo small {
+    display: block;
+    margin-top: 8px;
+    color: #555;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.cuenta-boton {
+    display: inline-block;
+    width: 100%;
+    padding: 16px 24px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #222;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cuenta-boton:hover {
+    background-color: #a78362;
+    border-color: #a78362;
+}
+
+.cuenta-boton:focus-visible,
+.cuenta-contenido a:focus-visible,
+.pedido-detalle summary:focus-visible {
+    outline: 2px solid #a78362;
+    outline-offset: 4px;
+}
+
+.cuenta-enlace {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.cuenta-enlace a {
+    color: #765338;
+}
+
+.cuenta-nota {
+    margin-top: 20px;
+    color: #555;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* AVISOS DE NAVEGACIÓN DEL PROTOTIPO, SIN JAVASCRIPT */
+
+.cuenta-aviso {
+    display: none;
+    padding: 16px;
+    margin-bottom: 25px;
+    background-color: #eae3da;
+    border-left: 3px solid #a78362;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.cuenta-aviso:target {
+    display: block;
+}
+
+/* PERFIL Y DIRECCIÓN */
+
+.perfil-contenedor {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.perfil-resumen {
+    width: 100%;
+    align-self: start;
+}
+
+.perfil-resumen > p {
+    color: #555;
+}
+
+.perfil-menu {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 25px;
+}
+
+.perfil-menu a {
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+}
+
+.perfil-detalle {
+    min-width: 0;
+}
+
+.perfil-detalle .cuenta-tarjeta {
+    max-width: none;
+    margin-bottom: 30px;
+}
+
+.perfil-detalle fieldset {
+    min-width: 0;
+    border: 0;
+    margin-bottom: 15px;
+}
+
+.perfil-detalle legend {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+/* HISTORIAL Y DETALLES CON HTML NATIVO */
+
+.pedidos-tabla-contenedor {
+    overflow-x: auto;
+}
+
+.pedidos-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.pedidos-tabla caption {
+    text-align: left;
+    color: #555;
+    padding-bottom: 15px;
+}
+
+.pedidos-tabla th,
+.pedidos-tabla td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.pedidos-tabla thead {
+    background-color: #faf9f7;
+}
+
+.pedido-detalle {
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.pedido-detalle summary {
+    cursor: pointer;
+    color: #765338;
+    margin-bottom: 10px;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .cuenta-contenido {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .perfil-contenedor {
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .perfil-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil-resumen {
+        max-width: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .cuenta-contenido {
+        padding: 35px 5%;
+    }
+
+    .cuenta-tarjeta {
+        padding: 25px 20px;
+    }
+
+    .cuenta-tarjeta h3 {
+        font-size: 22px;
+    }
+
+    .campo input {
+        padding: 13px 15px;
+        font-size: 16px;
+    }
+}

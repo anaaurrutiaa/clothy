@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Clothy</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cuenta.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>CLOTHY</h1>
+
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="login.html" aria-current="false">Iniciar sesión</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PRESENTACIÓN DE LA PÁGINA -->
+        <section class="catalogo-header">
+            <h2>Únete a Clothy</h2>
+            <p>Crea tu cuenta y descubre prendas para tu estilo.</p>
+        </section>
+
+        <!-- CONTENIDO DE LA CUENTA -->
+        <section class="cuenta-contenido">
+            <div class="cuenta-tarjeta">
+                <h3>Crear una cuenta</h3>
+                <p class="cuenta-intro">Completa tus datos para comenzar.</p>
+
+                <!-- Prototipo: sin atributos name para no enviar datos en la URL.
+                     Al integrar la API, añadir name y utilizar POST. -->
+                <form action="login.html#registro-validado" method="get">
+                    <div class="campo">
+                        <label for="nombre">Nombre completo</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            required minlength="2" maxlength="80" pattern=".*\S.*" autocomplete="name"
+                            
+                            aria-describedby="nombre-ayuda">
+                        <small id="nombre-ayuda">Entre 2 y 80 caracteres.</small>
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input
+                            type="email"
+                            id="correo"
+                            required maxlength="120" autocomplete="email"
+                            
+                            aria-describedby="correo-ayuda">
+                        <small id="correo-ayuda">Por ejemplo: nombre@correo.com.</small>
+                    </div>
+                    <div class="campo">
+                        <label for="contrasena">Contraseña</label>
+                        <input
+                            type="password"
+                            id="contrasena"
+                            required minlength="8" maxlength="72" autocomplete="new-password"
+                            
+                            aria-describedby="contrasena-ayuda">
+                        <small id="contrasena-ayuda">Entre 8 y 72 caracteres.</small>
+                    </div>
+
+                    <button type="submit" class="cuenta-boton">Crear cuenta</button>
+                </form>
+
+                <p class="cuenta-enlace">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></p>
+                <p class="cuenta-nota">Prototipo: se valida el formato; no se crea una cuenta real.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Clothy. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

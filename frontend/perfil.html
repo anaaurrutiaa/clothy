@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi perfil | Clothy</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cuenta.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>CLOTHY</h1>
+
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="perfil.html" aria-current="page">Mi perfil</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PRESENTACIÓN DE LA PÁGINA -->
+        <section class="catalogo-header">
+            <h2>Mi cuenta</h2>
+            <p>Tu información y tus pedidos en un solo lugar.</p>
+        </section>
+
+        <!-- CONTENIDO DE LA CUENTA -->
+        <section class="cuenta-contenido">
+            <div class="perfil-contenedor">
+                <aside class="cuenta-tarjeta perfil-resumen">
+                    <h3>Ana López</h3>
+                    <p>Cliente de Clothy</p>
+                    <p class="cuenta-nota">Perfil de ejemplo</p>
+
+                    <nav class="perfil-menu" aria-label="Secciones del perfil">
+                        <a href="#datos-personales">Mis datos</a>
+                        <a href="#direccion-envio">Dirección de envío</a>
+                        <a href="#historial-pedidos">Mis pedidos</a>
+                        <a href="login.html">Volver al inicio de sesión</a>
+                    </nav>
+                </aside>
+
+                <div class="perfil-detalle">
+                    <p id="sesion-demo" class="cuenta-aviso" role="status">
+                        Estás viendo un perfil de demostración. No se ha iniciado una sesión real.
+                    </p>
+                    <p id="datos-validados" class="cuenta-aviso" role="status">
+                        El formato de los datos es válido. Los cambios no se guardan en este prototipo.
+                    </p>
+
+                    <div class="cuenta-tarjeta">
+                        <h3>Información de mi cuenta</h3>
+                        <p class="cuenta-intro">Consulta tus datos personales y tu dirección de entrega.</p>
+
+                        <!-- Sin name: solo validación de formato y navegación.
+                             No hay envío ni almacenamiento de datos. -->
+                        <form action="perfil.html#datos-validados" method="get">
+                            <fieldset id="datos-personales">
+                                <legend>Datos personales</legend>
+                    <div class="campo">
+                        <label for="nombre">Nombre completo</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            required minlength="2" maxlength="80" pattern=".*\S.*" autocomplete="name"
+                            value="Ana López"
+                            aria-describedby="nombre-ayuda">
+                        <small id="nombre-ayuda">Entre 2 y 80 caracteres.</small>
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input
+                            type="email"
+                            id="correo"
+                            required maxlength="120" autocomplete="email"
+                            value="ana@example.com"
+                            >
+
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Teléfono</label>
+                        <input
+                            type="tel"
+                            id="telefono"
+                            required pattern="[0-9]{10}" minlength="10" maxlength="10" inputmode="numeric" autocomplete="tel-national" title="Escribe 10 dígitos, sin espacios ni guiones."
+                            value="3312345678"
+                            aria-describedby="telefono-ayuda">
+                        <small id="telefono-ayuda">10 dígitos, sin espacios ni guiones.</small>
+                    </div>
+
+                            </fieldset>
+
+                            <fieldset id="direccion-envio">
+                                <legend>Dirección de envío</legend>
+                    <div class="campo">
+                        <label for="calle">Calle</label>
+                        <input
+                            type="text"
+                            id="calle"
+                            required minlength="2" maxlength="100" pattern=".*\S.*" autocomplete="address-line1"
+                            value="Calle de ejemplo"
+                            >
+
+                    </div>
+                    <div class="campo">
+                        <label for="numero">Número exterior</label>
+                        <input
+                            type="text"
+                            id="numero"
+                            required maxlength="10" pattern="[0-9]+[A-Za-z]?" title="Escribe un número; puede terminar con una letra, por ejemplo 123A."
+                            value="123"
+                            aria-describedby="numero-ayuda">
+                        <small id="numero-ayuda">Por ejemplo: 123 o 123A.</small>
+                    </div>
+                    <div class="campo">
+                        <label for="colonia">Colonia</label>
+                        <input
+                            type="text"
+                            id="colonia"
+                            required minlength="2" maxlength="80" pattern=".*\S.*" autocomplete="address-line2"
+                            value="Centro"
+                            >
+
+                    </div>
+                    <div class="campo">
+                        <label for="ciudad">Ciudad</label>
+                        <input
+                            type="text"
+                            id="ciudad"
+                            required minlength="2" maxlength="80" pattern=".*\S.*" autocomplete="address-level2"
+                            value="Guadalajara"
+                            >
+
+                    </div>
+                    <div class="campo">
+                        <label for="estado">Estado</label>
+                        <input
+                            type="text"
+                            id="estado"
+                            required minlength="2" maxlength="60" pattern=".*\S.*" autocomplete="address-level1"
+                            value="Jalisco"
+                            >
+
+                    </div>
+                    <div class="campo">
+                        <label for="codigo-postal">Código postal</label>
+                        <input
+                            type="text"
+                            id="codigo-postal"
+                            required pattern="[0-9]{5}" minlength="5" maxlength="5" inputmode="numeric" autocomplete="postal-code" title="Escribe exactamente 5 dígitos."
+                            value="44100"
+                            aria-describedby="codigo-postal-ayuda">
+                        <small id="codigo-postal-ayuda">5 dígitos.</small>
+                    </div>
+
+                            </fieldset>
+
+                            <button type="submit" class="cuenta-boton">Guardar cambios</button>
+                        </form>
+                        <p class="cuenta-nota">Los datos mostrados son ficticios. Este formulario únicamente valida su formato.</p>
+                    </div>
+
+                    <!-- HISTORIAL CON DATOS DE EJEMPLO -->
+                    <section class="cuenta-tarjeta" id="historial-pedidos" aria-labelledby="titulo-pedidos">
+                        <h3 id="titulo-pedidos">Mis pedidos</h3>
+                        <p class="cuenta-intro">Consulta el estado y el detalle de tus compras.</p>
+
+                        <div class="pedidos-tabla-contenedor">
+                            <table class="pedidos-tabla">
+                                <caption>Historial de compras de ejemplo</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Pedido</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">CL-001</th>
+                                        <td><time datetime="2026-10-20">20/10/2026</time></td>
+                                        <td>$998 MXN</td>
+                                        <td>Entregado</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">CL-002</th>
+                                        <td><time datetime="2026-10-26">26/10/2026</time></td>
+                                        <td>$549 MXN</td>
+                                        <td>Confirmado</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <details class="pedido-detalle">
+                            <summary>Detalle del pedido CL-001</summary>
+                            <p>Camiseta básica blanca · M · Blanco · 1 unidad · $299 MXN.</p>
+                            <p>Jeans rectos azules · M · Azul · 1 unidad · $699 MXN.</p>
+                            <p>Envío de ejemplo sin costo. Total: $998 MXN.</p>
+                        </details>
+                        <details class="pedido-detalle">
+                            <summary>Detalle del pedido CL-002</summary>
+                            <p>Sudadera gris · L · Gris · 1 unidad · $549 MXN.</p>
+                            <p>Envío de ejemplo sin costo. Total: $549 MXN.</p>
+                        </details>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Clothy. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
